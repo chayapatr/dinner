@@ -6,6 +6,7 @@
 </script>
 
 <svelte:head>
+	<title>Dinner! 🍝🌟</title>
 	<link rel="icon" href={favicon} />
 	<meta property="og:image" content="/dinner.jpg" />
 	<meta name="twitter:card" content="summary_large_image" />
