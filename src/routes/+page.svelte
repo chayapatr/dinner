@@ -254,9 +254,9 @@
 		border-radius: 8px;
 	}
 	@media (min-width: 768px) {
-		/* :global(iframe) {
+		:global(iframe) {
 			max-height: 480px;
-		} */
+		}
 	}
 	/* light low */
 	.theme-light-low {
@@ -321,6 +321,9 @@
 	.theme-dark-low :global(main) {
 		background-color: #252830;
 	}
+	.theme-dark-low :global(strong) {
+		color: inherit;
+	}
 	.theme-dark-low :global(.internal-link) {
 		color: #b0b8c4;
 	}
@@ -374,6 +377,9 @@
 	}
 	.theme-dark-high :global(h6) {
 		color: #f0f0f0;
+	}
+	.theme-dark-high :global(strong) {
+		color: inherit;
 	}
 	.theme-dark-high :global(main) {
 		background-color: #1a1a1a;
