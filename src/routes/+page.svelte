@@ -174,7 +174,7 @@
 			{/each}
 		</ul>
 	</nav>
-	<main class="mx-auto prose min-w-0 flex-1 bg-white p-6 pb-12">
+	<main class="mx-auto prose max-w-3xl min-w-0 flex-1 bg-white p-6 pb-12">
 		{@html html}
 	</main>
 </div>
@@ -213,6 +213,28 @@
 	}
 	:global(.inline-expand) {
 		overflow-y: auto;
+	}
+	/* table layout */
+	:global(table) {
+		table-layout: fixed;
+		width: 100%;
+		border: none !important;
+		border-collapse: separate;
+		border-spacing: 4px;
+	}
+	:global(thead),
+	:global(tbody),
+	:global(tr),
+	:global(th),
+	:global(td) {
+		border: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	:global(table img) {
+		width: 100%;
+		display: block;
+		margin: 0 !important;
 	}
 	/* light low */
 	.theme-light-low {
