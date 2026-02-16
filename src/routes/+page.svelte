@@ -164,7 +164,7 @@
 			{/if}
 		</button>
 	</div>
-	<nav class="fixed top-0 left-0 hidden h-screen w-56 overflow-y-auto p-5 text-sm md:block">
+	<nav class="fixed top-0 left-0 hidden h-screen w-56 overflow-y-auto p-5 text-sm lg:block">
 		<ul class="space-y-1">
 			{#each headings.filter((h) => h.level > 1) as h}
 				<li style="padding-left: {(h.level - 2) * 0.75}rem">
@@ -174,7 +174,7 @@
 			{/each}
 		</ul>
 	</nav>
-	<main class="mx-auto prose max-w-3xl min-w-0 flex-1 bg-white p-6 pb-12">
+	<main class="mx-auto prose max-w-xl min-w-0 flex-1 bg-white p-6 pb-12 xl:max-w-3xl">
 		{@html html}
 	</main>
 </div>
@@ -240,8 +240,15 @@
 		width: 100%;
 		display: block;
 		margin: 0 !important;
-		max-height: 320px;
 		object-fit: cover;
+	}
+	:global(iframe) {
+		border-radius: 8px;
+	}
+	@media (min-width: 768px) {
+		:global(iframe) {
+			max-height: 480px;
+		}
 	}
 	/* light low */
 	.theme-light-low {
