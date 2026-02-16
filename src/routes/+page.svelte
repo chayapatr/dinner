@@ -231,10 +231,17 @@
 		margin: 0 !important;
 		padding: 0 !important;
 	}
+	:global(table td),
+	:global(table th) {
+		overflow: hidden;
+		border-radius: 8px;
+	}
 	:global(table img) {
 		width: 100%;
 		display: block;
 		margin: 0 !important;
+		max-height: 320px;
+		object-fit: cover;
 	}
 	/* light low */
 	.theme-light-low {
