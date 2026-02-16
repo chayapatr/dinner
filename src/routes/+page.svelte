@@ -18,13 +18,10 @@
 		);
 
 		// internal links (everything else)
-		parsed = parsed.replace(
-			/<a href="(?!\w+:\/\/)([^"]*)"/g,
-			(_: string, s: string) => {
-				const slug = decodeURIComponent(s).replace(/^\//, '').replace(/\.md$/, '');
-				return `<a href="#" data-slug="${slug}" class="internal-link"`;
-			}
-		);
+		parsed = parsed.replace(/<a href="(?!\w+:\/\/)([^"]*)"/g, (_: string, s: string) => {
+			const slug = decodeURIComponent(s).replace(/^\//, '').replace(/\.md$/, '');
+			return `<a href="#" data-slug="${slug}" class="internal-link"`;
+		});
 
 		return parsed;
 	}
@@ -46,7 +43,8 @@
 		wrapper.dataset.for = slug;
 
 		const header = document.createElement('div');
-		header.className = 'flex items-center justify-between px-3 py-1 bg-neutral-100 border-b border-neutral-300 text-sm text-neutral-600';
+		header.className =
+			'flex items-center justify-between px-3 py-1 bg-neutral-100 border-b border-neutral-300 text-sm text-neutral-600';
 
 		const title = document.createElement('span');
 		title.textContent = slug + '.md';
@@ -88,11 +86,18 @@
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
-<main class="prose p-6" style="font-family: 'adriane', serif;" onclick={handleClick}>
+<main
+	class="mx-auto prose max-w-4xl bg-white p-6"
+	style="font-family: 'adriane', serif;"
+	onclick={handleClick}
+>
 	{@html html}
 </main>
 
 <style>
+	/* :global(body) {
+		background-color: #eee;
+	} */
 	:global(.internal-link) {
 		text-decoration: none;
 		color: inherit;
