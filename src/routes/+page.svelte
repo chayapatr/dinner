@@ -200,6 +200,14 @@
 	:global(.internal-link) {
 		text-decoration: none;
 		color: inherit;
+		cursor: pointer;
+		background-color: rgba(0, 0, 0, 0.04);
+		padding: 0.1em 0.2em;
+		border-radius: 4px;
+		transition: background-color 0.15s;
+	}
+	:global(.internal-link:hover) {
+		background-color: rgba(0, 0, 0, 0.1);
 	}
 	:global(.internal-link)::before {
 		content: '[[';
