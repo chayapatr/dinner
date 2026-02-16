@@ -254,9 +254,9 @@
 		border-radius: 8px;
 	}
 	@media (min-width: 768px) {
-		:global(iframe) {
+		/* :global(iframe) {
 			max-height: 480px;
-		}
+		} */
 	}
 	/* light low */
 	.theme-light-low {
